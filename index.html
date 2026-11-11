@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Архітектурне бюро «Новий простір» (New Space). Дизайн інтер’єру з прозорим кошторисом і доказовим результатом.">
+    <meta name="theme-color" content="#F4F1EA">
+    <title>Архітектурне бюро «Новий простір» (New Space)</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <link rel="preload" as="image" href="assets/images/hero-building.jpg" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"></noscript>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline';">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              burgundy: "#581C25",
+              graphite: "#22252A",
+              beige: "#F4F1EA",
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+              heading: ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#F4F1EA] font-sans text-[#22252A] antialiased">
+    <header class="sticky top-0 z-50 border-b border-[#22252A]/10 bg-[#F4F1EA]/95 backdrop-blur">
+      <div class="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <a class="flex min-h-11 shrink-0 items-center gap-2 rounded transition-colors duration-200 hover:text-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#581C25]" href="#top" aria-label="New Space — на головну">
+          <img class="h-9 w-9 object-contain mix-blend-multiply" src="assets/images/logo.jpg" alt="" width="36" height="36" loading="lazy" decoding="async">
+          <span class="font-heading text-base font-bold">New Space</span>
+        </a>
+        <nav class="absolute inset-x-0 top-full hidden flex-col gap-1 border-b border-[#22252A]/10 bg-[#F4F1EA] px-4 py-3 shadow-lg lg:static lg:flex lg:flex-row lg:items-center lg:gap-3 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none" id="primary-navigation" aria-label="Основна навігація">
+          <a class="flex min-h-11 items-center rounded px-2 text-sm text-[#5C626D] transition-colors duration-200 hover:text-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#581C25]" href="#about">Про нас</a>
+          <a class="flex min-h-11 items-center rounded px-2 text-sm text-[#5C626D] transition-colors duration-200 hover:text-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#581C25]" href="#services">Послуги</a>
+          <a class="flex min-h-11 items-center rounded px-2 text-sm text-[#5C626D] transition-colors duration-200 hover:text-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#581C25]" href="#portfolio">Портфоліо «До/Після»</a>
+          <a class="flex min-h-11 items-center rounded px-2 text-sm text-[#5C626D] transition-colors duration-200 hover:text-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#581C25]" href="#location">Локація</a>
+          <a class="flex min-h-11 items-center rounded px-2 text-sm text-[#5C626D] transition-colors duration-200 hover:text-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#581C25]" href="#calculator">Калькулятор</a>
+          <a class="flex min-h-11 items-center rounded px-2 text-sm text-[#5C626D] transition-colors duration-200 hover:text-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#581C25]" href="#contacts">Контакти</a>
+          <a class="mt-2 flex min-h-11 items-center justify-center rounded-lg bg-[#581C25] px-4 text-sm font-semibold text-white transition-all duration-200 ease-out hover:bg-[#3C171B] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25] lg:hidden" href="#calculator">Розрахувати вартість</a>
+        </nav>
+        <a class="hidden min-h-11 shrink-0 items-center justify-center rounded-lg bg-[#581C25] px-4 text-sm font-semibold text-white transition-all duration-200 ease-out hover:bg-[#3C171B] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25] lg:flex" href="#calculator">Розрахувати вартість</a>
+        <button class="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg transition-all duration-200 ease-out hover:bg-[#22252A]/10 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25] lg:hidden" id="navigation-toggle" type="button" aria-label="Відкрити меню" aria-controls="primary-navigation" aria-expanded="false">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="overflow-hidden" id="hero" aria-labelledby="hero-title">
+        <div class="mx-auto grid min-h-[38rem] max-w-7xl grid-cols-1 items-center gap-10 px-4 py-12 sm:px-6 md:py-16 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-20">
+          <article class="max-w-2xl">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#581C25]">Архітектура · Інтер’єр · Сенси</p>
+            <h1 class="mb-6 font-heading text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl" id="hero-title">Дизайн інтер’єру з гарантією бюджету та доказовим результатом</h1>
+            <h2 class="mb-8 max-w-xl text-lg font-medium leading-relaxed text-[#5C626D] sm:text-xl">Створюємо функціональні простори для життя та бізнесу. Порівнюйте реалізацію «До/Після» та дізнавайтеся точний кошторис проєкту за лічені секунди.</h2>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <a class="flex min-h-12 items-center justify-center rounded-lg bg-[#581C25] px-6 py-3 text-center text-sm font-semibold text-white transition-all duration-200 ease-out hover:bg-[#3C171B] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25]" href="#calculator">Розрахувати вартість проєкту</a>
+              <a class="flex min-h-12 items-center justify-center rounded-lg border border-[#22252A]/20 px-6 py-3 text-center text-sm font-semibold text-[#22252A] transition-all duration-200 ease-out hover:bg-[#22252A]/10 hover:shadow-md hover:border-[#581C25] hover:text-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25]" href="#portfolio">Дивитися проекти <span class="ml-2" aria-hidden="true">↗</span></a>
+            </div>
+            <p class="mt-8 flex items-center gap-3 text-sm text-[#5C626D]"><span class="h-px w-9 bg-[#581C25]" aria-hidden="true"></span>Працюємо у Києві та по всій Україні</p>
+          </article>
+          <figure class="relative overflow-hidden rounded-2xl bg-[#22252A]/10">
+            <img class="w-full h-auto rounded-2xl shadow-xl object-cover" src="assets/images/hero-building.jpg" fetchpriority="high" loading="eager" width="835" height="474" alt="3D макет архітектурного проєкту New Space">
+            <figcaption class="absolute bottom-4 left-4 rounded-lg bg-[#F4F1EA]/95 px-4 py-3 text-sm font-semibold">Продумано до найменшої деталі</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr class="border-t border-[#22252A]/10 my-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <section id="about" aria-labelledby="about-title">
+        <div class="border-y border-[#22252A]/10">
+          <div class="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 py-6 text-sm sm:grid-cols-3 sm:px-6 lg:px-8">
+            <p class="flex items-center gap-3"><span class="font-heading text-xl font-bold text-[#581C25]">01</span> Прозорий кошторис на старті</p>
+            <p class="flex items-center gap-3"><span class="font-heading text-xl font-bold text-[#581C25]">02</span> Від концепції до реалізації</p>
+            <p class="flex items-center gap-3"><span class="font-heading text-xl font-bold text-[#581C25]">03</span> Супровід на кожному етапі</p>
+          </div>
+        </div>
+
+        <hr class="border-t border-[#22252A]/10 my-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">
+          <div class="mx-auto max-w-7xl">
+            <header class="mb-10 max-w-2xl">
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#581C25]">Переваги бюро</p>
+              <h2 class="mb-4 font-heading text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl" id="about-title">Переваги «Новий простір»</h2>
+              <p class="text-[#5C626D]">У кожного рішення є причина: воно відповідає вашому способу життя, реальним потребам і узгодженому бюджету.</p>
+            </header>
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+              <article class="rounded-2xl border border-[#22252A]/10 bg-white/70 p-6 sm:p-8">
+                <img src="assets/icons/icon-analytics.jpg" alt="Аналітика" class="w-14 h-14 mb-7 object-cover rounded-lg" width="56" height="56" loading="lazy" decoding="async">
+                <p class="mb-3 text-xs font-bold uppercase tracking-widest text-[#581C25]">01 / Розуміння</p>
+                <h3 class="mb-3 font-heading text-xl font-bold">Глибока аналітика</h3>
+                <p class="mb-0 leading-relaxed text-[#5C626D]">Досліджуємо ваші звички, простір і пріоритети, щоб дизайн був не лише красивим, а й справді вашим.</p>
+              </article>
+              <article class="rounded-2xl border border-[#22252A]/10 bg-white/70 p-6 sm:p-8">
+                <img src="assets/icons/icon-checklist.jpg" alt="Чек-лист" class="w-14 h-14 mb-7 object-cover rounded-lg" width="56" height="56" loading="lazy" decoding="async">
+                <p class="mb-3 text-xs font-bold uppercase tracking-widest text-[#581C25]">02 / Прозорість</p>
+                <h3 class="mb-3 font-heading text-xl font-bold">Точний чек-лист</h3>
+                <p class="mb-0 leading-relaxed text-[#5C626D]">Фіксуємо етапи, матеріали та рішення — ви завжди розумієте, що відбувається і що буде далі.</p>
+              </article>
+              <article class="rounded-2xl border border-[#22252A]/10 bg-white/70 p-6 sm:p-8">
+                <img src="assets/icons/icon-space.jpg" alt="Простір" class="w-14 h-14 mb-7 object-cover rounded-lg" width="56" height="56" loading="lazy" decoding="async">
+                <p class="mb-3 text-xs font-bold uppercase tracking-widest text-[#581C25]">03 / Комфорт</p>
+                <h3 class="mb-3 font-heading text-xl font-bold">Раціональний простір</h3>
+                <p class="mb-0 leading-relaxed text-[#5C626D]">Працюємо з плануванням і зберіганням, щоб кожен метр підтримував ваш комфорт у повсякденні.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-t border-[#22252A]/10 my-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <section class="bg-white/50 px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24" id="services" aria-labelledby="services-title">
+        <div class="mx-auto max-w-7xl">
+          <header class="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#581C25]">Формати співпраці</p>
+              <h2 class="font-heading text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl" id="services-title">Послуги та пакети</h2>
+            </div>
+            <p class="mb-0 max-w-md text-[#5C626D]">Оберіть глибину опрацювання — ми допоможемо підібрати формат під ваш простір і цілі.</p>
+          </header>
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+            <article class="group flex min-w-0 flex-col rounded-2xl border border-[#22252A]/10 bg-[#F4F1EA] p-5 sm:p-6">
+              <figure class="group mb-5 overflow-hidden rounded-xl">
+                <img class="h-48 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="assets/images/sketch.jpg" alt="Ескізне планування інтер’єру" width="2400" height="1792" loading="lazy" decoding="async" style="content-visibility: auto;">
+              </figure>
+              <p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#581C25]">Старт</p>
+              <h3 class="mb-3 font-heading text-xl font-bold">Ескізний проєкт</h3>
+              <p class="mb-6 flex-1 leading-relaxed text-[#5C626D]">Концепція, обмірний план і варіанти планування — щоб впевнено розпочати зміни.</p>
+              <p class="mb-5 font-heading text-2xl font-bold text-[#581C25]">від 600 грн/м²</p>
+              <a class="flex min-h-12 items-center justify-center rounded-lg border border-[#581C25] px-4 text-center text-sm font-semibold text-[#581C25] transition-all duration-200 ease-out hover:bg-[#22252A]/10 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25]" href="#calculator" data-package-link="sketch">Обрати пакет</a>
+            </article>
+            <article class="group relative flex min-w-0 flex-col rounded-2xl border-2 border-[#581C25] bg-white p-5 shadow-lg sm:p-6">
+              <p class="mb-4 w-fit rounded-full bg-[#581C25] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">Комплексний пакет</p>
+              <figure class="group mb-5 overflow-hidden rounded-xl">
+                <img class="h-48 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="assets/images/after.png" alt="Світлий реалізований інтер’єр квартири" width="1086" height="1448" loading="lazy" decoding="async" style="content-visibility: auto;">
+              </figure>
+              <p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#581C25]">Повний супровід</p>
+              <h3 class="mb-3 font-heading text-xl font-bold">Повний комплексний проєкт</h3>
+              <p class="mb-6 flex-1 leading-relaxed text-[#5C626D]">Планування, 3D-візуалізації, комплект креслень та узгоджені рішення для реалізації.</p>
+              <p class="mb-5 font-heading text-2xl font-bold text-[#581C25]">від 1200 грн/м²</p>
+              <a class="flex min-h-12 items-center justify-center rounded-lg bg-[#581C25] px-4 text-center text-sm font-semibold text-white transition-all duration-200 ease-out hover:bg-[#3C171B] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25]" href="#calculator" data-package-link="full">Обрати пакет</a>
+            </article>
+            <article class="group flex min-w-0 flex-col rounded-2xl border border-[#22252A]/10 bg-[#F4F1EA] p-5 sm:p-6">
+              <figure class="group mb-5 overflow-hidden rounded-xl">
+                <img class="h-48 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="assets/images/realized.jpg" alt="Готовий інтер’єр з меблями та оздобленням" width="2400" height="1792" loading="lazy" decoding="async" style="content-visibility: auto;">
+              </figure>
+              <p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#581C25]">Преміум</p>
+              <h3 class="mb-3 font-heading text-xl font-bold">Преміум + Авторський нагляд</h3>
+              <p class="mb-6 flex-1 leading-relaxed text-[#5C626D]">Повний дизайн-проєкт, персональний супровід і контроль реалізації на кожному етапі.</p>
+              <p class="mb-5 font-heading text-2xl font-bold text-[#581C25]">від 2000 грн/м²</p>
+              <a class="flex min-h-12 items-center justify-center rounded-lg border border-[#581C25] px-4 text-center text-sm font-semibold text-[#581C25] transition-all duration-200 ease-out hover:bg-[#22252A]/10 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25]" href="#calculator" data-package-link="premium">Обрати пакет</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-t border-[#22252A]/10 my-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <section class="px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <article>
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#581C25]">Реалізований проєкт</p>
+            <h2 class="mb-5 font-heading text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl" id="portfolio-title">Від ідеї — до простору, що працює</h2>
+            <p class="mb-7 max-w-xl leading-relaxed text-[#5C626D]">Порівняйте інтер’єр до та після реалізації. Продумане планування допомагає створити функціональний простір для життя.</p>
+            <ul class="mb-8 flex flex-wrap gap-3 text-sm">
+              <li class="rounded-full bg-white px-4 py-2">До реалізації</li>
+              <li class="rounded-full bg-white px-4 py-2">Після реалізації</li>
+              <li class="rounded-full bg-white px-4 py-2">Планування простору</li>
+            </ul>
+            <a class="inline-flex min-h-11 items-center rounded text-sm font-semibold text-[#581C25] transition-all duration-200 ease-out hover:bg-[#22252A]/10 hover:shadow-md hover:text-[#581C25]/80 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25]" href="#calculator">Розрахувати схожий проєкт <span class="ml-2" aria-hidden="true">→</span></a>
+          </article>
+          <figure class="min-w-0">
+            <div class="group relative aspect-[4/3] overflow-hidden rounded-xl bg-[#22252A]/10 shadow-lg" id="comparison-slider">
+              <img class="absolute inset-0 h-full w-full object-cover" src="assets/images/after.png" alt="Інтер’єр вітальні після оновлення" width="1086" height="1448" loading="lazy" decoding="async" style="content-visibility: auto;">
+              <div class="absolute inset-0" id="before-image">
+                <img class="absolute inset-0 h-full w-full object-cover" src="assets/images/before.jpg" alt="Той самий інтер’єр до оновлення" width="360" height="480" loading="lazy" decoding="async" style="content-visibility: auto;">
+              </div>
+              <span class="absolute left-4 top-4 z-10 rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-[#22252A] backdrop-blur">Після</span>
+              <span class="absolute right-4 top-4 z-10 rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-[#22252A] backdrop-blur">До</span>
+              <div class="pointer-events-none absolute inset-y-0 left-1/2 z-20 w-0.5 -translate-x-1/2 bg-white shadow" id="comparison-line" aria-hidden="true"></div>
+              <div class="pointer-events-none absolute left-1/2 top-1/2 z-20 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white bg-[#581C25] text-2xl font-bold text-white shadow-lg transition-transform duration-200 group-hover:scale-105" id="comparison-handle" aria-hidden="true">↔</div>
+              <input class="absolute inset-0 z-30 h-full w-full cursor-ew-resize opacity-0 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-[-4px] focus-visible:outline-white" id="comparison-range" type="range" min="0" max="100" value="50" aria-label="Порівняння До та Після">
+            </div>
+            <figcaption class="pt-3 text-center text-sm text-[#5C626D]">Перетягніть повзунок або скористайтеся клавішами зі стрілками, щоб порівняти результат</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr class="border-t border-[#22252A]/10 my-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <section class="px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24" id="location" aria-labelledby="location-title">
+        <div class="mx-auto max-w-7xl">
+          <header class="mb-10">
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#581C25]">Завітайте до нас</p>
+            <h2 class="font-heading text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl" id="location-title">Ми поруч, у Києві та по всій Україні</h2>
+          </header>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <figure class="aspect-video w-full overflow-hidden rounded-2xl shadow-sm border border-[#22252A]/10">
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube-nocookie.com/embed/MRy6owOO4fk"
+                title="Відеопрезентація інтер'єру New Space"
+                loading="lazy"
+                fetchpriority="low"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </figure>
+            <article class="min-w-0">
+              <h3 class="mb-3 font-heading text-lg font-bold">Бюро «Новий простір» (New Space) — Київ, Україна</h3>
+              <figure class="aspect-video w-full overflow-hidden rounded-2xl shadow-sm border border-[#22252A]/10 my-6" aria-label="Розташування офісу New Space на карті">
+                <iframe class="w-full h-full border-0" loading="lazy" fetchpriority="low" allowfullscreen title="Офіс New Space у Києві на карті" src="https://maps.google.com/maps?q=Kyiv%2C%20Ukraine&amp;z=12&amp;output=embed" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-t border-[#22252A]/10 my-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <section class="w-full bg-[#581C25] px-4 py-12 text-white sm:px-6 lg:px-8" aria-labelledby="final-cta-title">
+        <div class="mx-auto max-w-7xl">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-white/75">Архітектурне бюро «Новий простір»</p>
+          <h2 class="mb-3 font-heading text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl" id="final-cta-title">Є ідея? Давай втілимо її разом!</h2>
+          <p class="mb-0 max-w-2xl text-white/80">Розкажіть нам про задум — разом знайдемо найкраще рішення для вашого бюджету.</p>
+        </div>
+      </section>
+
+      <hr class="border-t border-[#22252A]/10 my-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <section class="px-4 py-4 sm:px-6 sm:py-10 md:py-12 lg:px-8" id="calculator" aria-labelledby="calculator-title">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <article>
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#581C25]">ПЕРШИЙ КРОК ДО НОВОГО ПРОСТОРУ</p>
+            <h2 class="mb-4 font-heading text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl" id="calculator-title">Калькулятор кошторису</h2>
+            <p class="leading-relaxed text-[#5C626D]">Оберіть площу та формат співпраці — калькулятор покаже попередню оцінку. Остаточний бюджет узгодимо після консультації.</p>
+            <div class="mt-6 max-w-sm rounded-xl border border-[#22252A]/10 bg-white/60 p-4 sm:p-6 lg:p-8">
+              <p class="mb-1 text-xs font-semibold uppercase tracking-wider text-[#5C626D]">Є запитання? Ми на зв'язку:</p>
+              <a class="flex min-h-11 items-center gap-2 text-xl font-bold text-[#581C25] transition-all duration-200 ease-out hover:bg-[#22252A]/10 hover:shadow-md hover:text-[#581C25]/80 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25]" href="tel:+380441234567">+38 (044) 123 45 67</a>
+            </div>
+          </article>
+          <form class="min-w-0 rounded-2xl border border-[#22252A]/10 bg-white p-4 shadow-sm sm:p-6 lg:p-8" id="estimate-form">
+            <div class="mb-6">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <label class="text-sm font-semibold" for="area">Площа, м²</label>
+                <input class="min-h-11 w-24 rounded-lg border border-[#22252A]/20 px-3 text-right font-semibold transition-colors duration-200 hover:border-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#581C25]" id="area" name="area" type="number" min="10" max="1000" step="1" value="80" required>
+              </div>
+              <input class="h-11 w-full cursor-pointer accent-[#581C25] transition-opacity duration-200 hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25]" id="area-range" type="range" min="10" max="1000" step="1" value="80" aria-label="Площа об’єкта від 10 до 1000 квадратних метрів">
+              <div class="mt-1 flex justify-between text-xs text-[#5C626D]"><span>10 м²</span><span>1 000 м²</span></div>
+            </div>
+            <div class="mb-6">
+              <label class="mb-2 block text-sm font-semibold" for="package">Пакет послуг</label>
+              <select class="min-h-12 w-full rounded-lg border border-[#22252A]/20 bg-white px-4 transition-colors duration-200 hover:border-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#581C25]" id="package" name="package" required>
+                <option value="sketch" data-price="600">Ескізний проєкт — 600 грн/м²</option>
+                <option value="full" data-price="1200" selected>Повний комплексний проєкт — 1200 грн/м²</option>
+                <option value="premium" data-price="2000">Преміум + Авторський нагляд — 2000 грн/м²</option>
+              </select>
+            </div>
+            <div class="mb-6 rounded-xl bg-[#F4F1EA] p-4 sm:p-6 lg:p-8" aria-live="polite">
+              <p class="mb-1 text-sm text-[#5C626D]">Орієнтовна вартість</p>
+              <p class="mb-0 font-heading text-3xl font-bold text-[#581C25]" id="estimate-total">96 000 грн</p>
+              <p class="mb-0 mt-2 text-xs text-[#5C626D]">Попередня оцінка; фінальна вартість залежить від складу робіт.</p>
+            </div>
+            <div class="mb-5">
+              <label class="mb-2 block text-sm font-semibold" for="phone">Телефон для консультації <span class="font-normal text-[#5C626D]">(необов’язково)</span></label>
+              <input class="min-h-12 w-full rounded-lg border border-[#22252A]/20 px-4 transition-colors duration-200 hover:border-[#581C25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#581C25]" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+38 (___) ___ __ __">
+            </div>
+            <button class="flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-[#581C25] px-5 py-3 text-center font-semibold text-white transition-all duration-200 ease-out hover:bg-[#3C171B] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#581C25]" type="submit"><span aria-hidden="true">+</span> Розрахувати кошторис</button>
+            <p class="mb-0 mt-2 text-center text-xs text-[#5C626D]" id="estimate-status" aria-live="polite">Заповніть форму, щоб підготувати запит на кошторис.</p>
+          </form>
+        </div>
+      </section>
+      <hr class="border-t border-[#22252A]/10 my-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    </main>
+
+    <footer class="bg-[#22252A] text-white/70" id="contacts">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <article>
+            <a class="mb-4 inline-flex min-h-11 items-center gap-3 rounded text-white transition-colors duration-200 hover:text-[#F4F1EA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="#top">
+              <img class="h-9 w-9 rounded bg-white p-1 object-contain" src="assets/images/logo.jpg" alt="New Space" width="28" height="28" loading="lazy" decoding="async">
+              <span class="text-lg font-bold text-white">New Space</span>
+            </a>
+            <p class="max-w-xs text-sm leading-relaxed">Архітектурне бюро New Space створює функціональні простори для життя та бізнесу.</p>
+          </article>
+          <nav aria-label="Навігація у підвалі">
+            <h2 class="mb-3 font-heading text-base font-bold text-white">Навігація</h2>
+            <ul class="space-y-1 text-sm">
+              <li><a class="flex min-h-11 items-center rounded transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="#about">Про нас</a></li>
+              <li><a class="flex min-h-11 items-center rounded transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="#services">Послуги</a></li>
+              <li><a class="flex min-h-11 items-center rounded transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="#portfolio">Портфоліо</a></li>
+              <li><a class="flex min-h-11 items-center rounded transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="#location">Локація</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Послуги">
+            <h2 class="mb-3 font-heading text-base font-bold text-white">Послуги</h2>
+            <ul class="space-y-1 text-sm">
+              <li><a class="flex min-h-11 items-center rounded transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="#services">Ескізний проєкт</a></li>
+              <li><a class="flex min-h-11 items-center rounded transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="#services">Повний комплексний проєкт</a></li>
+              <li><a class="flex min-h-11 items-center rounded transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="#services">Преміум + Авторський нагляд</a></li>
+            </ul>
+          </nav>
+          <address class="not-italic">
+            <h2 class="mb-3 font-heading text-base font-bold text-white">Контакти</h2>
+            <ul class="space-y-1 text-sm">
+              <li><a class="flex min-h-11 items-center rounded transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="tel:+380441234567">+38 (044) 123 45 67</a></li>
+              <li><a class="flex min-h-11 items-center rounded transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="mailto:hello@novyprostir.ua">hello@novyprostir.ua</a></li>
+              <li class="py-2">Київ, Україна</li>
+            </ul>
+          </address>
+        </div>
+        <hr class="my-8 border-white/15">
+        <div class="flex flex-col justify-between gap-2 text-xs sm:flex-row">
+          <small>© 2026 New Space</small>
+          <small>Функціональні простори для життя та бізнесу.</small>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navigationToggle = document.getElementById("navigation-toggle");
+      const primaryNavigation = document.getElementById("primary-navigation");
+
+      if (navigationToggle && primaryNavigation) {
+        const closeNavigation = () => {
+          primaryNavigation.classList.add("hidden");
+          navigationToggle.setAttribute("aria-expanded", "false");
+          navigationToggle.setAttribute("aria-label", "Відкрити меню");
+        };
+
+        navigationToggle.addEventListener("click", () => {
+          const isExpanded = navigationToggle.getAttribute("aria-expanded") === "true";
+          primaryNavigation.classList.toggle("hidden", isExpanded);
+          navigationToggle.setAttribute("aria-expanded", String(!isExpanded));
+          navigationToggle.setAttribute("aria-label", isExpanded ? "Відкрити меню" : "Закрити меню");
+        });
+        primaryNavigation.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeNavigation);
+        });
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeNavigation();
+        });
+      }
+
+      const areaInput = document.getElementById("area");
+      const areaRange = document.getElementById("area-range");
+      const packageSelect = document.getElementById("package");
+      const estimateTotal = document.getElementById("estimate-total");
+      const estimateForm = document.getElementById("estimate-form");
+      const estimateStatus = document.getElementById("estimate-status");
+      const numberFormatter = new Intl.NumberFormat("uk-UA", { maximumFractionDigits: 0 });
+
+      const updateEstimate = () => {
+        if (!(areaInput instanceof HTMLInputElement)
+          || !(areaRange instanceof HTMLInputElement)
+          || !(packageSelect instanceof HTMLSelectElement)
+          || !(estimateTotal instanceof HTMLElement)) return;
+
+        const area = Number(areaInput.value);
+        const price = Number(packageSelect.selectedOptions[0].dataset.price);
+        if (!Number.isFinite(area) || area < 10 || area > 1000 || !Number.isFinite(price)) {
+          estimateTotal.textContent = "Вкажіть площу від 10 до 1 000 м²";
+          return;
+        }
+        estimateTotal.textContent = `${numberFormatter.format(area * price)} грн`;
+      };
+
+      if (areaInput instanceof HTMLInputElement && areaRange instanceof HTMLInputElement) {
+        areaInput.addEventListener("input", () => {
+          areaRange.value = areaInput.value;
+          updateEstimate();
+        });
+        areaRange.addEventListener("input", () => {
+          areaInput.value = areaRange.value;
+          updateEstimate();
+        });
+      }
+      if (packageSelect instanceof HTMLSelectElement) {
+        packageSelect.addEventListener("change", updateEstimate);
+      }
+
+      document.querySelectorAll("[data-package-link]").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (packageSelect instanceof HTMLSelectElement && link instanceof HTMLElement) {
+            packageSelect.value = link.dataset.packageLink || "full";
+            updateEstimate();
+          }
+        });
+      });
+
+      if (estimateForm instanceof HTMLFormElement) {
+        estimateForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          updateEstimate();
+          if (!(areaInput instanceof HTMLInputElement)
+            || !(packageSelect instanceof HTMLSelectElement)
+            || !(estimateTotal instanceof HTMLElement)) return;
+
+          const phoneInput = document.getElementById("phone");
+          const phone = phoneInput instanceof HTMLInputElement ? phoneInput.value.trim() : "";
+          const packageName = packageSelect.selectedOptions[0].textContent || "";
+          const subject = encodeURIComponent("Запит на кошторис — «Новий простір» (New Space)");
+          const body = encodeURIComponent(
+            `Вітаю! Прошу зв'язатися зі мною щодо кошторису.\nПлоща: ${areaInput.value} м²\nПакет: ${packageName}\nОрієнтовна вартість: ${estimateTotal.textContent}\nТелефон: ${phone || "не вказано"}`
+          );
+          if (estimateStatus instanceof HTMLElement) {
+            estimateStatus.textContent = "Відкриваємо поштову програму для надсилання запиту.";
+          }
+          window.location.href = `mailto:hello@novyprostir.ua?subject=${subject}&body=${body}`;
+        });
+      }
+
+      const comparisonSlider = document.getElementById("comparison-slider");
+      const beforeImage = document.getElementById("before-image");
+      const comparisonLine = document.getElementById("comparison-line");
+      const comparisonHandle = document.getElementById("comparison-handle");
+      const comparisonRange = document.getElementById("comparison-range");
+
+      if (comparisonSlider instanceof HTMLElement
+        && beforeImage instanceof HTMLElement
+        && comparisonLine instanceof HTMLElement
+        && comparisonHandle instanceof HTMLElement
+        && comparisonRange instanceof HTMLInputElement) {
+        const updateComparison = () => {
+          const position = Number(comparisonRange.value);
+          beforeImage.style.clipPath = `inset(0 0 0 ${position}%)`;
+          comparisonLine.style.left = `${position}%`;
+          comparisonHandle.style.left = `${position}%`;
+        };
+
+        comparisonRange.addEventListener("input", updateComparison);
+        updateComparison();
+      }
+    </script>
+  </body>
+</html>
